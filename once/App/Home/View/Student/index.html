@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>学生列表</title>
+</head>
+<body>
+<table border="1" width="600" align="center" cellpadding="2" rules="all" cellspacing="0">
+	<tr>
+		<th>ID</th>
+		<th>姓名</th>
+		<th>性别</th>
+		<th>年龄</th>
+		<th>学历</th>
+	</tr>
+	{foreach $data as $value}
+ 	<tr>
+ 		<td>{$value.id}</td>
+ 		<td>{$value.name}</td>
+ 		<td>{$value.sex}</td>
+ 		<td>{$value.age}</td>
+ 		<td>{$value.edu}</td>
+ 	</tr>
+ 	{/foreach}
+ </table> 
+</body>
+</html>

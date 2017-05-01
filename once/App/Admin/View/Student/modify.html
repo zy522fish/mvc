@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>修改页面</title>
+</head>
+<body>
+<form action="index.php?m=Admin&c=Student&a=modifyHandle&id={$data.id}" method="post">
+	<table border="1" width="600" align="center" cellpadding="2" rules="all" cellspacing="0">
+		<tr>
+			<td>姓名: </td>
+			<td><input type="text" name="name" value="{$data.name}"></input></td>
+		</tr>
+		<tr>
+			<td>性别: </td>
+			<td>
+			<input type="radio" name="sex" value="男" {if $data.sex =='男'} checked {/if}>男</input>
+			<input type="radio" name="sex" value="女" {if $data.sex =='女'} checked {/if}>女</input>
+			</td>
+		</tr>
+		<tr>
+			<td>年龄: </td>
+			<td><input type="text" name="age" value="{$data.age}"></input></td>
+		</tr>
+		<tr>
+			<td>学历: </td>
+			<td>
+				<select name="edu">
+					<option value="初中" {if $data.edu =='初中'} selected{/if}>初中</option>
+					<option value="高中" {if $data.edu =='高中'} selected{/if}>高中</option>
+					<option value="大专" {if $data.edu =='大专'} selected{/if}>大专</option>
+					<option value="大本" {if $data.edu =='大本'} selected{/if}>大本</option>
+					<option value="研究生" {if $data.edu =='研究生'} selected{/if}>研究生</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" ><input type="submit" value="提交"></input></td>
+	
+		</tr>
+	</table>
+</form>
+</body>
+</html>
